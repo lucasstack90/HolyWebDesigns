@@ -58,6 +58,14 @@ body {
   filter: invert(1);
 }
 
+.titulo2{
+  color:  #c3dc35d9;
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.35;
+}
+
 /* ================= MOBILE ================= */
 
 @media (max-width: 576px) {
@@ -173,4 +181,43 @@ body {
     padding: 16px;
   }
 }
+
+/* ================= Folhas De Papel, Blocos ================= */
+
+/* BLOCO DO SALMO (FOLHA) */
+.folha {
+  background-color: #fdfcf8;
+  color: #2b2b2b;
+  padding: 40px;
+  border-radius: 6px;
+  font-family: 'Georgia', serif;
+  line-height: 1.8;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.3),
+    inset 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+/* BLOCO DE EXPLICAÇÃO */
+.comentario {
+  background-color: #111;
+  color: #f1f1f1;
+  padding: 30px;
+  border-radius: 10px;
+  border-left: 4px solid #c9a24d;
+  line-height: 1.7;
+}
+
+.comentario h4 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* RESPONSIVIDADE EXTRA */
+@media (max-width: 991px) {
+  .folha,
+  .comentario {
+    padding: 25px;
+  }
+}
+
 
