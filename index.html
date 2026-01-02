@@ -1,152 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Salmos da Alma</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Salmos da Alma</title>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Fonte -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Fonte -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<header class="header-salmos">
-  <nav class="navbar navbar-expand-lg">
+  <body>
+    <header class="header-salmos">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <!-- Marca / Título -->
+          <a class="navbar-brand text-center mx-auto mx-lg-0" href="#">
+            <h1 class="mb-0 titulo-site">Salmos da Alma</h1>
+            <p class="mb-0 subtitulo-site">Palavras escritas em oração</p>
+          </a>
+
+          <!-- Botão hambúrguer -->
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSalmos"
+            aria-controls="navbarSalmos"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menu -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSalmos"
+          >
+            <ul class="navbar-nav gap-lg-4 mt-3 mt-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Salmos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO -->
+    <section class="bloco-principal py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <!-- Imagem -->
+          <div class="col-lg-6">
+            <div class="img-container">
+              <img
+                src="fotos/WhatsApp Image 2025-12-29 at 20.26.39.jpeg"
+                alt="Imagem do projeto"
+              />
+            </div>
+          </div>
+
+          <!-- Texto -->
+          <div class="col-lg-6 bloco-texto">
+            <h2 class="titulo-bloco">
+              Quem sou eu? Qual o propósito desta Página?
+            </h2>
+
+            <p class="descricao-bloco">
+              Este espaço nasceu como uma forma de expressar sentimentos,
+              reflexões e orações através da escrita, inspirado nos salmos
+              bíblicos.
+            </p>
+
+            <p class="descricao-bloco">
+              Aqui, cada palavra é escrita com o coração, buscando trazer
+              conforto, esperança e conexão espiritual para quem lê.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TÍTULO 2 -->
     <div class="container">
+      <div class="row mb-3">
+        <div class="col text-center">
+          <h3 class="titulo2">Meus Salmos</h3>
+        </div>
+      </div>
+    </div>
 
-      <!-- Marca / Título -->
-      <a class="navbar-brand text-center mx-auto mx-lg-0" href="#">
-        <h1 class="mb-0 titulo-site">Salmos da Alma</h1>
-        <p class="mb-0 subtitulo-site">Palavras escritas em oração</p>
-      </a>
-
-      <!-- Botão hambúrguer -->
-      <button
-        class="navbar-toggler ms-auto"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSalmos"
-        aria-controls="navbarSalmos"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Menu -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSalmos">
-        <ul class="navbar-nav gap-lg-4 mt-3 mt-lg-0 text-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Salmos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
-          </li>
-        </ul>
+    <!-- ================= SALMOS ================= -->
+    <div class="container my-5">
+      <!-- LISTA DE SALMOS -->
+      <div id="lista-salmos" class="row g-4">
+        <!-- Os cards são gerados automaticamente pelo JS -->
       </div>
 
+      <!-- LEITURA DO SALMO -->
+      <div id="leitura-salmo" class="d-none mt-5">
+        <button class="btn btn-outline-light mb-4" onclick="voltarLista()">
+          ← Voltar
+        </button>
+
+        <div class="row g-4">
+          <div class="col-12 col-lg-6">
+            <div class="folha">
+              <h2 id="titulo-salmo" class="titulo-folha"></h2>
+              <div id="texto-salmo"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="comentario">
+              <h4>📖 Explicação</h4>
+              <div id="comentario-salmo"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </nav>
-</header>
 
+    
+    <!-- ================= RODAPÉ ================= -->
+<footer class="rodape-salmos">
+  <div class="container py-5">
 
+    <div class="row gy-4 align-items-start">
 
-<!-- CONTEÚDO -->
-<section class="bloco-principal py-5">
-  <div class="container">
-    <div class="row align-items-center g-4">
+      <!-- Marca -->
+      <div class="col-md-6 text-center text-md-start">
+        <h4 class="rodape-titulo">Salmos da Alma</h4>
+        <p class="rodape-texto">
+          Palavras escritas em oração.<br>
+          Um espaço de reflexão, fé e esperança.
+        </p>
+      </div>
 
-      <!-- Imagem -->
-      <div class="col-lg-6">
-        <div class="img-container">
-          <img src="fotos/WhatsApp Image 2025-12-29 at 20.26.39.jpeg" alt="Imagem do projeto">
+      <!-- Versículo + Ícones -->
+      <div class="col-md-6 text-center text-md-end">
+        <p class="rodape-versiculo">
+          “Perto está o Senhor dos que têm o coração quebrantado.”
+          <span>Salmos 34:18</span>
+        </p>
+
+        <div class="rodape-icons">
+          <a href="https://github.com/lucasstack90" target="_blank" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+
+          <a href="https://www.instagram.com/luk_lcj/" target="_blank" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/lucasaguiarcorrea/" target="_blank" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Texto -->
-      <div class="col-lg-6 bloco-texto">
-        <h2 class="titulo-bloco">Quem Sou Eu? Qual o Propósito Desta Página?</h2>
-
-        <p class="descricao-bloco">
-          Este espaço nasceu como uma forma de expressar sentimentos, reflexões e orações através da escrita, inspirado nos salmos bíblicos.
-        </p>
-
-        <p class="descricao-bloco">
-          Aqui, cada palavra é escrita com o coração, buscando trazer conforto, esperança e conexão espiritual para quem lê.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-    <!-- TÍTULO 2 -->
-    <div class="row mb-2">
-      <div class="col text-center">
-        <h3 class="titulo2">Meus Salmos</h3>
-      </div>
     </div>
 
-<div class="container my-5">
-  <div class="row g-4">
+    <hr class="rodape-linha">
 
-    <!-- BLOCO DO SALMO -->
-    <div class="col-lg-6">
-      <div class="folha">
-        <h2 class="titulo-folha">Salmo 1</h2>
-
-        <p>
-          Bem-aventurado o homem que não anda no conselho dos ímpios,
-          não se detém no caminho dos pecadores,
-          nem se assenta na roda dos escarnecedores.
-        </p>
-
-        <p>
-          Antes, o seu prazer está na lei do Senhor,
-          e na sua lei medita de dia e de noite.
-        </p>
-      </div>
-    </div>
-
-    <!-- BLOCO DE EXPLICAÇÃO -->
-    <div class="col-lg-6">
-      <div class="comentario">
-        <h4>📖 Explicação</h4>
-
-        <p>
-          Este salmo nos mostra que a verdadeira felicidade não está
-          em seguir os caminhos do mundo, mas em permanecer firme
-          na Palavra de Deus.
-        </p>
-
-        <p>
-          Ele contrasta dois caminhos: o do justo e o do ímpio,
-          ensinando que nossas escolhas moldam nosso destino espiritual.
-        </p>
-      </div>
+    <div class="text-center rodape-copy">
+      © 2026 • Salmos da Alma — Feito com fé e propósito
     </div>
 
   </div>
-</div>
-     
-  
+</footer>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+    <script src="script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
