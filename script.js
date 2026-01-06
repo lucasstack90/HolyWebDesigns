@@ -40,7 +40,22 @@ const salmos = {
       <p>Um salmo de clamor e confiança
       em meio à aflição.</p>
     `
-  }
+  },
+
+  /* ===== NOVOS SALMOS ===== */
+
+  4: {
+    titulo: "Salmo 4",
+    texto: `
+      <p>Responde-me quando clamo, ó Deus da minha justiça.
+      Na angústia me deste alívio.</p>
+    `,
+    comentario: `
+      <p>Um salmo que expressa confiança em Deus
+      mesmo em tempos de ansiedade.</p>
+    `
+  },
+
 };
 
 // ===============================
