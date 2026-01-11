@@ -42,8 +42,6 @@ const salmos = {
     `
   },
 
-  /* ===== NOVOS SALMOS ===== */
-
   4: {
     titulo: "Salmo 4",
     texto: `
@@ -54,28 +52,29 @@ const salmos = {
       <p>Um salmo que expressa confiança em Deus
       mesmo em tempos de ansiedade.</p>
     `
-  },
-
+  }
 };
 
 // ===============================
 // GERAR LISTA DE SALMOS
 // ===============================
-const listaSalmos = document.getElementById("lista-salmos");
+document.addEventListener("DOMContentLoaded", () => {
+  const listaSalmos = document.getElementById("lista-salmos");
 
-Object.keys(salmos).forEach(id => {
-  const textoLimpo = salmos[id].texto
-    .replace(/<[^>]*>/g, "")
-    .slice(0, 90);
+  Object.keys(salmos).forEach(id => {
+    const textoLimpo = salmos[id].texto
+      .replace(/<[^>]*>/g, "")
+      .slice(0, 90);
 
-  listaSalmos.innerHTML += `
-    <div class="col-12 col-lg-6">
-      <div class="folha salmo-card" role="button" onclick="abrirSalmo(${id})">
-        <h2 class="titulo-folha">${salmos[id].titulo}</h2>
-        <p>${textoLimpo}...</p>
+    listaSalmos.innerHTML += `
+      <div class="col-12 col-lg-6">
+        <div class="folha salmo-card" role="button" onclick="abrirSalmo(${id})">
+          <h2 class="titulo-folha">${salmos[id].titulo}</h2>
+          <p>${textoLimpo}...</p>
+        </div>
       </div>
-    </div>
-  `;
+    `;
+  });
 });
 
 // ===============================
@@ -85,14 +84,19 @@ function abrirSalmo(id) {
   const salmo = salmos[id];
   if (!salmo) return;
 
+  // Esconde lista e agradecimentos
   document.getElementById("lista-salmos").classList.add("d-none");
+  document.getElementById("agradecimentos").classList.add("d-none");
+
+  // Mostra leitura
   document.getElementById("leitura-salmo").classList.remove("d-none");
 
+  // Preenche conteúdo
   document.getElementById("titulo-salmo").innerText = salmo.titulo;
   document.getElementById("texto-salmo").innerHTML = salmo.texto;
   document.getElementById("comentario-salmo").innerHTML = salmo.comentario;
 
-  // impede pulo de tela
+  // Scroll suave
   document.getElementById("leitura-salmo").scrollIntoView({
     behavior: "smooth",
     block: "start"
@@ -103,9 +107,12 @@ function abrirSalmo(id) {
 // VOLTAR PARA LISTA
 // ===============================
 function voltarLista() {
+  // Mostra lista e agradecimentos
   document.getElementById("leitura-salmo").classList.add("d-none");
   document.getElementById("lista-salmos").classList.remove("d-none");
+  document.getElementById("agradecimentos").classList.remove("d-none");
 
+  // Scroll suave
   document.getElementById("lista-salmos").scrollIntoView({
     behavior: "smooth",
     block: "start"

@@ -10,15 +10,37 @@ html {
 body {
   margin: 0;
   font-family: 'Merriweather', serif;
-  background: linear-gradient(90deg, #0b0b0b, #3a0f5c);
   color: #ffffff;
+
+  /* Fundo com imagem + overlay */
+  background-image:
+    linear-gradient(
+      rgba(11, 11, 11, 0.78),
+      rgba(58, 15, 92, 0.78)
+    ),
+    url("https://images.pexels.com/photos/8383656/pexels-photo-8383656.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 /* ================= HEADER / NAVBAR ================= */
 /* ================= HEADER SALMOS ================= */
 
 .header-salmos {
-  background: linear-gradient(90deg, #0b0b0b, #3a0f5c);
+   background-image:
+    linear-gradient(
+      rgba(11, 11, 11, 0.88),
+    ),
+    url("https://images.pexels.com/photos/8383655/pexels-photo-8383655.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   padding: 12px 0;
 }
 
@@ -319,10 +341,20 @@ body {
 /* ================= RODAPÉ ================= */
 
 .rodape-salmos {
-  background: linear-gradient(90deg, #0b0b0b, #3a0f5c);
+  background-image:
+    linear-gradient(
+      rgba(11, 11, 11, 0.9),
+    ),
+    url("https://images.pexels.com/photos/8383655/pexels-photo-8383655.jpeg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: #eaeaea;
   margin-top: 80px;
   font-family: 'Merriweather', serif;
+
 }
 
 .rodape-titulo {
